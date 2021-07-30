@@ -1,39 +1,592 @@
----
-layout: home
-title: Home
-sitemap:
-priority: 1.0
-changefreq: weekly
-lastmod: 2014-07-07T16:57:30+05:30
----
-{% for post in paginator.posts %}
-<div class="unit whole single-post-excerpt">
-	<h3 class='alignleft'><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <span class="meta alignright"><time class="timeago postlist-meta" datetime="{{ post.date | date: "%Y-%m-%d" }}"><i class="fa fa-calendar"></i>{{ post.date | date: "%B %-d, %Y" }}</time></span>
-    <div style="clear: both;"></div>
-	<div class="meta-info">
-        <span class="alignleft">By <a href='{{ post.website }}'>{{ post.author }} </a></span>
-
-        <div class="alignright">
-		{% if post.tags and post.tags.size > 0 %}
-			<div class="tags">
-				Tagged:
-				{% for tag in post.tags %}
-				<span><i class="fa fa-tag"></i>{{ tag }}</span>
-				{% endfor %}
-			</div>
-		{% endif %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>侯煊个人主页</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">侯煊</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">简介</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">背景经历</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">项目经历</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">专业技能</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#demo">项目展示</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">科研&获奖</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">侯煊</h1>
+                    <div class="subheading mb-5">
+                        <i class="bi bi-phone">18701902753</i>
+                        <p>
+                            <i class="bi bi-envelope"></i>
+                            <a href="mailto:workmonkey21@126.com">workmonkey21@126.com</a>
+                        </p>
+                    </div>
+                    <p class="lead mb-5">读研期间在清华大学智能技术系统国家重点实验室学习， 从事与Embodied AI、计算机视觉以及机器人方面相关研究。 期间参与多项科研、军工项目，并在其中担任主要研究、开发人员。</p>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">背景经历</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">清华大学</h3>
+                            <div class="subheading mb-3">科研助理</div>
+                            <div></div>
+                            <p>智能技术系统国家重点实验室</p>
+                            <p>负责、参与多项科研、军工项目的研发</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2019.08 - 至今</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">上海应用技术大学</h3>
+                            <div class="subheading mb-3">硕士研究生</div>
+                            <div>控制科学与工程</div>
+                            <p>GAP: 3.75/4</p>
+                            <p>主修课程：模式识别、数据挖掘、矩阵论、最优化理论及应用、计算机图像处理</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2019.09 - 2022.07</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">趋视信息科技有限公司</h3>
+                            <div class="subheading mb-3">软件研发工程师</div>
+                            <div></div>
+                            <p>研发部</p>
+                            <p>负责公司主要产品，视频分析系统的研发与维护</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2017.04 - 2018.08</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">上海应用技术大学</h3>
+                            <div class="subheading mb-3">本科</div>
+                            <div>电气工程及其自动化</div>
+                            <p>GPA: 3.6/4</p>
+                            <p>主修课程：电路、数字电路、模拟电路、自动控制原理</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2013.09 - 2017.07</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Projects-->
+            <section class="resume-section" id="projects">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">项目经历</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">智能头盔原型机</h3>
+                            <div class="subheading mb-3">负责人</div>
+                            <div>
+                                <p>ROS/VSLAM/LSTM/目标检测/知识图谱/场景图谱</p>
+                                <ul class="fa-ul mb-0">
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        项目为清华大学与某司合作，需要开发一款智能头盔；
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="i fas fa-angle-right"></i></span>
+                                        头盔AI具备多种智能功能，可采集多传感器（RGB-D、IMU等）数据，根据用户指令自行决策，输出结果；
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="i fas fa-angle-right"></i></span>
+                                        负责头盔AI部分、软件部分的整体架构设计、技术选型、代码实现；
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="i fas fa-angle-right"></i></span>
+                                        头盔集成功能：自然语言场景描述、室内未知场景识别、未知环境下的目标搜索；
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="i fas fa-angle-right"></i></span>
+                                        使用ROS作为整体通信系统；
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="i fas fa-angle-right"></i></span>
+                                        从SUN RGB-D数据集中统计先验知识图谱；设计方法结合场景图谱、知识图谱生成搜索子目标；
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="i fas fa-angle-right"></i></span>
+                                        使用ORB-SLAM3生成稀疏点云，从稀疏点云生成Octomap；
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="i fas fa-angle-right"></i></span>
+                                        使用Active Nerual SLAM进行建图；
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="i fas fa-angle-right"></i></span>
+                                        设计全局策略、局部策略进行导航；
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2021.06 - 至今</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">3D场景建图（多模态数据融合地图构建）</h3>
+                            <div class="subheading mb-3">负责人</div>
+                            <div>
+                                <p>目标检测/语义分割/三维重建/SLAM/VIO</p>
+                                <ul class="fa-ul mb-0">
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        使用Kimera-Semantic进行语义分割，结合imu数据，进行Metric-Semantic三维重建；
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2021.05 - 2021.06</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">未知室内场景识别</h3>
+                            <div class="subheading mb-3">负责人</div>
+                            <div>
+                                <p>目标检测/知识图谱/场景图谱/图相似度的度量</p>
+                                <ul class="fa-ul mb-0">
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        从网上爬取室内场景相关视频，设计方法，统计先验知识图谱；
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        根据场景图谱和先验知识图谱，设计算法，实现场景识别功能；
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2021.05 - 2021.06</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">智能眼镜-自然语言场景描述</h3>
+                            <div class="subheading mb-3">主要开发者</div>
+                            <div>
+                                <p>目标检测/场景图谱/NLP/云边协同/智能眼镜/ Android/微信小程序/React/Neo4j</p>
+                                <ul class="fa-ul mb-0">
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        设计场景图谱生成（Scene Graph Generation）方法，输入实时视频流，输出场景图谱；
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        使用Yolov5进行目标检测，使用Neural Baby Talk生成自然语言图像描述；
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        使用MongoDB Atlas缓存图像描述，结合场景图谱生成以实时视频流为输入的增量式更新的自然语言场景描述；
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        使用Neo4j、AntV G6引擎，制作场景图谱可视化；
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        为算法开发了安卓手机端、微信小程序端、Web端等多平台客户端， 各个平台均可使用自带摄像头传输视频流到云端进行计算，再从云端获取生成的自然语言场景描述；
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2020.12 - 2021.03</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">深度学习破解图像验证码</h3>
+                            <div class="subheading mb-3">负责人</div>
+                            <div>
+                                <p>Pytorch/OpenCV/TVM/网络爬虫</p>
+                                <ul class="fa-ul mb-0">
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        在小规模数据集上（小于1000张图片）进行fine tune，模型识别验证码在实际使用中准确率达到80%以上；
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        使用TVM将模型部署到cpu、gpu、移动平台，达到较好的性能；
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        编写爬虫，爬取目标网站的图像资源；
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2020.06 - 2020.07</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">跨模态导盲杖</h3>
+                            <div class="subheading mb-3">主要开发者</div>
+                            <div>
+                                <p>GAN/Pytorch/CUDA/TensorRT</p>
+                                <ul class="fa-ul mb-0">
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        开发一款智能导盲杖，具备视觉-触觉跨模态信号转换功能，根据不同的路面，反馈给使用者不同的触感；
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        设计GAN，并使用Pytorch实现网络，完成数据从视觉到触觉的端到端的转化；
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        使用TensorRT，将网络部署在Nvdia TX2上进行推理加速；
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2019.11 - 2020.4</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">图像分析-大规模人群计数</h3>
+                            <div class="subheading mb-3">程序编写</div>
+                            <div>
+                                <p>Pytorch/CNN</p>
+                                <ul class="fa-ul mb-0">
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        使用Pytorch实现空洞卷积神经网络模型、训练模型、测试模型；
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2019.03 - 2019.07</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">智能视频分析软件云平台系统</h3>
+                            <div class="subheading mb-3">负责人</div>
+                            <div>
+                                <p>C++/Qt/socket</p>
+                                <ul class="fa-ul mb-0">
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        该系统是智能视频分析云系统，可以通过网络，连接分布在监控区域的各个监控摄像机， 实时查看监控视频内容、获取对视频进行智能分析的结果、在线接收视频报警、 切换监视器显示的视频节点的多功能系统；
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        有用户登陆功能、普通用户管理员权限区分功能、视频监控节点分组等等功能、 可在线远程管理视频节点，也可离线管理本地视频节点;
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        负责软件本地部分架构设计、功能实现;
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        使用QT完成系统本地PC端GUI的开发;
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2018.03 - 2018.07</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">视频智能分析数据流转发软件</h3>
+                            <div class="subheading mb-3">负责人</div>
+                            <div>
+                                <p>C/MQTT/MFC</p>
+                                <ul class="fa-ul mb-0">
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        使用MFC开发使用MQTT协议的消息转发软件；
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2017.12 - 2017.12</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">视频监控节点计划轮换软件</h3>
+                            <div class="subheading mb-3">负责人</div>
+                            <div>
+                                <p>C++/MFC</p>
+                                <ul class="fa-ul mb-0">
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        是一套可以按照监控者意愿，安排视频监控显示器自动切换、连接视频监控节点的软件。 可以独立安排每个显示屏的节点切换计划。可以独立安排每个显示屏的轮换间隔、轮换逻辑。 可以以显示屏为主体安排节点，也可以以节点为主体为该节点安排显示屏。每个显示屏都可以断线重连。
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        负责整个软件的构架设计、所有的模块实现、GUI编写；
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2017.08 - 2017.09</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">智能视频分析平台</h3>
+                            <div class="subheading mb-3">程序编写</div>
+                            <div>
+                                <p>C++/MFC</p>
+                                <ul class="fa-ul mb-0">
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        该软件是一套集视频监控、实时对视频内容进行智能分析（例如人群计数、越界、进入某区域、离开某区域、 攀高、丢垃圾等等行为）、人脸识别等功能为一体的智能化视频分析平台。
+                                    </li>
+                                    <li>
+                                        <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                        负责部分功能模块的编写，负责部分菜单、对话框的界面编写；
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2017.04 - 2017.07</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">专业技能</h2>
+                    <div class="subheading mb-3">
+                        主要编程语言 & 框架工具
+                        <div class="row row-cols-1 row-cols-md-4 g-4">
+                            <div class="col">
+                                <div class="card text-dark bg-light mb-3 h-100">
+                                    <div class="card-header">编程语言</div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">C++</h4>
+                                        <p class="card-text">5年经验</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card text-dark bg-light mb-3 h-100">
+                                    <div class="card-header">编程语言</div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Python</h4>
+                                        <p class="card-text">4年经验</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card text-dark bg-light mb-3 h-100">
+                                    <div class="card-header">编程语言</div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">JS</h4>
+                                        <p class="card-text">半年经验</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card text-dark bg-light mb-3 h-100">
+                                    <div class="card-header">框架</div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Pytorch</h4>
+                                        <p class="card-text">1年经验</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card text-dark bg-light mb-3 h-100">
+                                    <div class="card-header">框架</div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">QT</h4>
+                                        <p class="card-text">3年经验</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card text-dark bg-light mb-3 h-100">
+                                    <div class="card-header">框架</div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">MFC</h4>
+                                        <p class="card-text">3年经验</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card text-dark bg-light mb-3 h-100">
+                                    <div class="card-header">系统</div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Ubuntu</h4>
+                                        <p class="card-text">3年经验</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card text-dark bg-light mb-3 h-100">
+                                    <div class="card-header">系统</div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">ROS</h4>
+                                        <p class="card-text">2年经验</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card text-dark bg-light mb-3 h-100">
+                                    <div class="card-header">软件</div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Matlab</h4>
+                                        <p class="card-text">3年经验</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card text-dark bg-light mb-3 h-100">
+                                    <div class="card-header">工具</div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Docker</h4>
+                                        <p class="card-text">半年经验</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subheading mb-3">
+                        其它技能学习经历
+                        <ul class="fa-ul mb-0">
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                CUDA；
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                TVM深度学习编译器；
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                百度Apollo公开课；
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                LLVM工具链；
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-angle-right"></i></span>
+                                Intel OpenVINO；
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="demo">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">项目展示</h2>
+                    <div class="my-auto"></div>
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                            <div class="card h-100" style="width: 18rem; margin: 2px 5px 2px 5px">
+                                <img class="card-img-top demo-img" src="assets/img/scene_caption_demo.gif" />
+                                <div class="ratio ratio-4x3" style="background: #000000"><video src="https://my-bucket-1304669359.cos.ap-beijing.myqcloud.com/demo_videos/scene_caption_demo.mp4" type="video/mp4" controls="controls"></video></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">自然语言场景描述</h5>
+                                    <p class="card-text">输入实时视频流，在未知场景中实时生成场景描述的自然语言文本.</p>
+                                    <!-- a.btn.btn-primary(href='#about') Go About-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100" style="width: 18rem; margin: 2px 5px 2px 5px">
+                                <img class="card-img-top demo-img" src="assets/img/scene_recognition_demo.gif" />
+                                <div class="ratio ratio-4x3" style="background: #000000"><video src="https://my-bucket-1304669359.cos.ap-beijing.myqcloud.com/demo_videos/scene_recognition_demo.mp4" type="video/mp4" controls="controls"></video></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">室内未知场景识别</h5>
+                                    <p class="card-text">输入实时视频流，自动识别所在场景类型（如办公室、厨房、客厅等）.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100" style="width: 18rem; margin: 2px 5px 2px 5px">
+                                <img class="card-img-top demo-img" src="assets/img/object_searching_demo.gif" />
+                                <div class="ratio ratio-4x3" style="background: #000000"><video src="https://my-bucket-1304669359.cos.ap-beijing.myqcloud.com/demo_videos/object_searching_demo.mp4" type="video/mp4" controls="controls"></video></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">未知环境下的目标搜索</h5>
+                                    <p class="card-text">输入实时视频流，在未知环境下搜索指定目标.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Awards-->
+            <section class="resume-section" id="awards">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">科研 & 获奖经历</h2>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>2021.09</td>
+                                <td>ICRA-2022在投</td>
+                            </tr>
+                            <tr>
+                                <td>2021.06</td>
+                                <td>CIAI-2021审稿人</td>
+                            </tr>
+                            <tr>
+                                <td>2021.04</td>
+                                <td>端-边-云协同框架下的机器人知识图谱生成系统及方法.专利.已公开.CN112732450A</td>
+                            </tr>
+                            <tr>
+                                <td>2020.06</td>
+                                <td>校级学术英语竞赛一等奖</td>
+                            </tr>
+                            <tr>
+                                <td>2016.07</td>
+                                <td>西门子杯中国智能制造挑战赛全国二等奖</td>
+                            </tr>
+                            <tr>
+                                <td>2016.07</td>
+                                <td>上海市工业自动化挑战赛二等奖</td>
+                            </tr>
+                            <tr>
+                                <td>2015.09</td>
+                                <td>全国大学生数学建模竞赛上海市三等奖</td>
+                            </tr>
+                            <tr>
+                                <td>2014.06</td>
+                                <td>校级学术英语竞赛三等奖</td>
+                            </tr>
+                            <tr>
+                                <td>2013.11</td>
+                                <td>上海市大学生工程训练综合能力竞赛</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </div>
-        <div style="clear: both;"></div>
-	</div>
-</div>
-{% endfor %}
-<div class="unit whole paginator">
-	{% if paginator.previous_page %}
-	<a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
-	{% endif %}
-	<span>Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-	{% if paginator.next_page %}
-	<a href="{{ paginator.next_page_path }}" class="next">Next</a>
-	{% endif %}
-</div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
